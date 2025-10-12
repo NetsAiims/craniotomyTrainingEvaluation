@@ -1,0 +1,13 @@
+__pycache__/
+.vscode
+.env
+._.DS_Store
+
+*.DS_Store
+
+data/
+images/
+credentials.py
+
+
+
