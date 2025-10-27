@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Drilling Evaluation Report</title>
+</head>
+<body>
+    <div class="page-container">
+        <table class="header-table">
+            <tr>
+                <td class="logo-cell">
+                    <img src="{{logo1}}" class="logo">
+                </td>
+                <td class="header-text-cell">
+                    <h2>Neurosurgery Education and Training School (NETS)</h2>
+                    <h2>All India Institute of Medical Sciences, New Delhi</h2>
+                    <h2 id="colab">In collaboration with</h2>
+                    <h2>Indian Institute of Technology, New Delhi</h2>
+                </td>
+                <td class="logo-cell">
+                    <img src="{{logo2}}" class="logo">
+                </td>
+            </tr>
+        </table>
+
+        <hr>
+        <p class="date-right">Date: {{today_date}}</p>
+        <h1><strong>Drilling Effectualness Evaluation Report</strong></h1>
+        <table class="table2">
+            <tbody>
+                <tr>
+                    <td width="200px" style="font-size: 18px;"><strong>Name: </strong></td>
+                    <td style="font-size: 16px;">{{name}}</td>
+                    <td width="100px" style="font-size: 16px;"><strong>Program: </strong></td>
+                    <td style="font-size: 16px;">{{program}}</td>
+                </tr>
+                <tr>
+                    <td width="200px" style="font-size: 18px;"><strong>Iteration: </strong></td>
+                    <td style="font-size: 16px;">{{iteration}}</td>
+                    <td width="100px" style="font-size: 18px;"><strong>Time Taken: </strong></td>
+                    <td style="font-size: 16px;">{{time}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="score-highlight">
+            <h2>Overall Score: {{final}}</h2>
+        </div>
+        <div class="image-container">
+            <div class="image-wrapper">
+                <img src="{{image}}" id="drill" alt="Original Image" />
+                <p class="image-label">Original Image</p>
+            </div>
+
+            {% if gradImage %}
+            <div class="image-wrapper">
+                <img src="{{gradImage}}" id="drill2" alt="GradCAM Visualization" />
+                <p class="image-label">Red : Worst part   |   Green : Best Part</p>
+            </div>
+            {% endif %}
+        </div>
+        <p class="authority-section">Competent Authority</p>
+    </div>
+</body>
+</html>

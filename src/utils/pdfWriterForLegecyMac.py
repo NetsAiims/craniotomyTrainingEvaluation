@@ -62,8 +62,8 @@ class PdfWrite():
             template = template_env.get_template(html_template)
             output_text = template.render(context)
 
-            # config = pdfkit.configuration(wkhtmltopdf='/usr/local/bin/wkhtmltopdf')
-            config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')           
+            config = pdfkit.configuration(wkhtmltopdf='/usr/local/bin/wkhtmltopdf')
+            # config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')           
             if not os.path.exists("data/Reports"):
                 os.mkdir("data/Reports")
             pdf_name = f'data/Reports/{self.inputs["name"]}_{self.inputs["iteration"]}.pdf'

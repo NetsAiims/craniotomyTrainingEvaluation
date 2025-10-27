@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 
 from src.utils.videothread import VideoThread
 from src.utils.input_dialog import InputDialog
-from src.utils.pdf_writer import PdfWrite
+from src.utils.pdfWriter import PdfWrite
 from src.utils.annotator import Annotator
 from src.utils.input_dialog2 import InputDialog2
 from src.utils.input_dialog import InputDialog
