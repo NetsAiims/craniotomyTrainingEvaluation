@@ -1,0 +1,45 @@
+name: sutureDrill
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.12
+  - pip
+  - ffmpeg
+  - cairo
+  - tesseract
+  - pillow
+  - matplotlib
+  - numpy
+  - tqdm
+  - setuptools
+  - wheel
+  - pip:
+      - anyio==4.9.0
+      - captum==0.8.0
+      - click==8.2.1
+      - ffmpeg-python==0.2.0
+      - ffmpegcv==0.3.18
+      - gitpython==3.1.44
+      - httpx==0.28.1
+      - jinja2==3.1.4
+      - matplotlib==3.10.3
+      - numpy==1.26.4
+      - opencv-python==4.11.0.86
+      - pdf2image==1.17.0
+      - pdfkit==1.0.0
+      - pillow==11.2.1
+      - playwright==1.55.0
+      - psutil==7.0.0
+      - pyautogui==0.9.54
+      - pydantic==2.11.7
+      - pyyaml==6.0.2
+      - requests==2.32.4
+      - rich==14.0.0
+      - sympy==1.13.3
+      - torch==2.7.1
+      - torchvision==0.22.1
+      - torchaudio==2.7.1
+      - tqdm==4.67.1
+      - typer==0.16.0
