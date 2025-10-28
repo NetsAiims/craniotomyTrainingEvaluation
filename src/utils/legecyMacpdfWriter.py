@@ -58,7 +58,7 @@ class PdfWrite():
             template_loader = jinja2.FileSystemLoader('./')
             template_env = jinja2.Environment(loader=template_loader)
 
-            html_template = 'src/utils/basic-template.html'
+            html_template = 'src/utils/legecyMacBasicTemplate.html'
             template = template_env.get_template(html_template)
             output_text = template.render(context)
 
@@ -68,8 +68,8 @@ class PdfWrite():
                 os.mkdir("data/Reports")
             pdf_name = f'data/Reports/{self.inputs["name"]}_{self.inputs["iteration"]}.pdf'
             output_pdf = 'data/Reports/pdf_generated.pdf'
-            pdfkit.from_string(output_text, output_pdf, configuration=config, css=['src/utils/style.css'], options={"enable-local-file-access": ""})
-            pdfkit.from_string(output_text, pdf_name, configuration=config, css=['src/utils/style.css'], options={"enable-local-file-access": ""})
+            pdfkit.from_string(output_text, output_pdf, configuration=config, css=['src/utils/legecyMacStyle.css'], options={"enable-local-file-access": ""})
+            pdfkit.from_string(output_text, pdf_name, configuration=config, css=['src/utils/legecyMacStyle.css'], options={"enable-local-file-access": ""})
 
             subject = "Drilling Evaluation Report"
             body = "Dear Sir/Madam,\n\nThank you for your interest in the drilling task. Please find attached the evaluation report for the same. Please note that the scores presented herein have been acquired through the utilization of an automated, AI-driven tool. In light of the ongoing nature of the associated research, this document does not possess the legal authority of a formal certificate.\n\nThanks and Regards,\nNETS Lab, AIIMS, New Delhi"

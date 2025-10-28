@@ -13,6 +13,7 @@ data/recordings/*
 !data/Images/.gitkeep
 !data/Reports/.gitkeep
 !data/temp/.gitkeep
+!data/recordings/.gitkeep
 
 credentials.py
 

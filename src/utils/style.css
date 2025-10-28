@@ -1,15 +1,15 @@
-
-
 p { 
     font-size: 18px; 
 }
 
 body {
-    width: 100vw;
-    font-family: Calibri;
+    font-family: 'Noto Sans', sans-serif;
     margin: 0;
-    padding: 15px;
-    background-color: #fafafa;
+    background-color: white;
+}
+
+.page-container {
+    padding: 20px;
 }
 
 li {
@@ -17,54 +17,41 @@ li {
     margin: 10px;
 }
 
-#logo1 {
-    max-width: 100px;
-    max-height: 100px;
-    padding: 0 15px;
-    object-fit: contain;
-}
-
-#logo2 {
-    max-width: 100px;
-    max-height: 100px;
-    padding: 0 15px;
-    object-fit: contain;
-}
-
-.outer {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    flex-wrap: nowrap;
+.header-table {
     width: 100%;
-    justify-content: center; 
-    /*flex-direction: row; */
-    flex-direction: row;
-    margin: 0 auto;
-    align-items: center; 
-    font-family: Bookman Old Style;
-    margin-bottom: 15px;
-    padding: 5px 0;
+    border-collapse: collapse;
+    margin: 0 auto 15px auto;
 }
 
-.inner {
-    width: 64%;
-    flex-direction: column; 
-    justify-content: flex-end; 
-    align-items: center;
+.logo-cell {
+    width: 20%;
     text-align: center;
+    vertical-align: middle;
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.header-text-cell {
+    width: 60%;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Noto Serif', 'Times New Roman', Times, serif;
 }
 
 h2 {
-    margin: 5px;
-    font-size: 18px;
+    font-size: 16px;
+    margin: 4px;
     text-align: center;
     color: #2c3e50;
 }
 
 hr {
+    border: none;
     border-top: 2px solid #bdc3c7;
-    border-radius: 20px;
 }
 
 table {
@@ -80,40 +67,43 @@ tr {
 }
 
 #colab {
-    font-size: 14px;
+    font-size: 13px;
     font-style: italic;
     color: #7f8c8d;
-    margin: 10px 5px 5px 5px;
+    margin: 8px 5px 5px 5px;
 }
 
 .image-container {
     text-align: center;
-    margin: 15px 0;
-    padding: 15px;
+    margin: 5px 0 0 0;
+    padding: 5px;
     background: #f8f9fa;
     border-radius: 8px;
-    border: 2px dashed #bdc3c7;
+    border: none;
+    page-break-inside: avoid;
 }
 
 .image-wrapper {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    display: inline-block;
 }
 
 .image-wrapper img {
+
     max-width: 100%;
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#drill {
+    height: 210px;
+    object-fit: contain;
     background: white;
     padding: 8px;
 }
 
-#drill {
-    height: 230px;
-    object-fit: contain;
-}
-
 #drill2 {
-    height: 330px;
+    height: 260px;
     object-fit: contain;
 }
 
@@ -125,57 +115,18 @@ tr {
     text-align: center;
 }
 
-#infoTable{
-    margin: 0 auto;
-    max-width: 60%;
-}
-
-.borderTop {
-    border-top: 1px solid black;
-    border-collapse: collapse;
-}
-
-.borderBottom {
-    border-bottom: 1px solid black;
-    border-collapse: collapse;
-}
-
-thead td {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-}
-
-tbody td {
-    font-size: 16px;
-    text-align: center;
-}
-
-.table {
-    width: 60%;
-    margin: 0 auto;
-}
-
-.table td {
-    font-size: 16px;
-}
-
-.table2 tr {
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
-
 .table2 {
     width: 75%;
     margin: 0 auto;
     border-collapse: separate;
-    border-spacing: 0 6px;
+    border-spacing: 0 4px;
 }
 
 .table2 td {
     padding: 8px 12px;
     font-size: 16px;
     background-color: #f8f9fa;
+    text-align: left;
 }
 
 .table2 tr td:first-child {
@@ -188,31 +139,27 @@ tbody td {
     border-radius: 0 6px 6px 0;
 }
 
-.topTable td {
-    text-align: left;
-}
-
 h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     color: #2c3e50;
-    margin: 20px 0;
+    margin: 15px 0;
     letter-spacing: 0.5px;
 }
 
 .score-highlight {
     text-align: center;
-    margin: 15px 0;
+    margin: 10px 0;
     
 }
 
 .score-highlight h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #27ae60;
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    padding: 12px 20px;
+    padding: 10px 18px;
     border-radius: 8px;
     border-left: 4px solid #27ae60;
     display: inline-block;
@@ -221,8 +168,8 @@ h1 {
 
 .authority-section {
     text-align: right;
-    margin-top: 25px;
-    padding-top: 15px;
+    margin-top: 15px;
+    padding-top: 10px;
     border-top: 1px solid #e0e0e0;
     font-size: 16px;
     font-weight: 600;
@@ -231,9 +178,8 @@ h1 {
 
 .date-right {
     text-align: right;
-    margin: 15px 30px 15px 0;
+    margin: 10px 0;
     font-size: 16px;
     color: #7f8c8d;
 }
-
 

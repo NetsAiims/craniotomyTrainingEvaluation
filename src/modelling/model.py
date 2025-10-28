@@ -106,9 +106,9 @@ import io
 
 
 import pickle
-with (open("outputs_gol.pickle", "rb")) as openfile:
+with (open("src/modelling/outputs_gol.pickle", "rb")) as openfile:
     outputs = pickle.load(openfile)
-with (open("labels_gol.pickle", "rb")) as openfile:
+with (open("src/modelling/labels_gol.pickle", "rb")) as openfile:
     labels = pickle.load(openfile)
 
 outputs = [i[0] for i in outputs]

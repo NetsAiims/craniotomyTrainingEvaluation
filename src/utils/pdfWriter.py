@@ -68,11 +68,11 @@ class PdfWrite():
             template_loader = jinja2.FileSystemLoader('./')
             template_env = jinja2.Environment(loader=template_loader)
 
-            html_template = 'src/utils/updatedBasicTemplate.html'
+            html_template = 'src/utils/basicTemplate.html'
             template = template_env.get_template(html_template)
             output_text = template.render(context)
             
-            with open('src/utils/updatedStyle.css', 'r', encoding='utf-8') as f:
+            with open('src/utils/style.css', 'r', encoding='utf-8') as f:
                 css_string = f.read()
             style_injection_point = output_text.find('</head>')
             final_html_content = output_text[:style_injection_point] + f'<style>{css_string}</style>' + output_text[style_injection_point:]
