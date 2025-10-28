@@ -1,12 +1,14 @@
 # Craniotomy Training Evaluation 
 
+
 This repository contains the code for craniotomy training evaluation, where a deep learning model is deployed and used to assess the surgical training performance of neurosurgeons. The model analyzes images captured after the training procedure to infer the quality and accuracy of the performed craniotomy.
 
 The codebase in this repository successfully deployes a deep learning model for real time inference through a stand alone application built in python, The application also has features like gradient visualization and report generation with intuitive user interface and options to record and capture camera feed. 
 
 For more details regarding the model architecture and training methodology, please refer to the following resources:
 
-GitHub Repository - https://github.com/ramank1137/Microscopic-Neuro-Drilling;
+GitHub Repository - https://github.com/ramank1137/Microscopic-Neuro-Drilling
+
 Scientific Article - https://www.sciencedirect.com/science/article/abs/pii/S0010482525010017
   
 
@@ -14,21 +16,33 @@ Scientific Article - https://www.sciencedirect.com/science/article/abs/pii/S0010
 
 ### Using Conda
 
-```conda env create -f environment.yml```
+```bash
+conda env create -f environment.yml
+```
 
-```conda activate drillingEvaluation```
+```bash
+conda activate drillingEvaluation
+```
 
 ### Using Python Environment
 
-```python -m venv venv```
+```bash
+python -m venv venv
+```
 
 For Windows
-```venv\Scripts\activate``` 
+```bash
+venv\Scripts\activate
+``` 
 
 For Linux or Mac
-```venv/bin/activate```
+```bash
+venv/bin/activate
+```
 
-```pip install -r requirements.txt```
+```bash
+pip install -r requirements.txt
+```
 
 ## Run App
 
